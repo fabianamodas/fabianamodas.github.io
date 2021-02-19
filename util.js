@@ -1,8 +1,8 @@
 function GetQueryVars() {
     var vars = {};
     j = 0;
-    let q = window.location.search;
-    const query = /\?{0,1}([\w\d]{1,})\=([\w\d\-\+\=]{0,})\&{0,}/;
+    let q = decodeURIComponent(window.location.search);
+    const query = /\?|\&([^=]+)\=([^&]+)/;
 
     var m = q.match(query);
     for (; m; m = q.match(query)) {
@@ -12,7 +12,7 @@ function GetQueryVars() {
 
         q = q.slice(len);
 
-        vars[m[1]] = m[2].replaceAll('+',' ')
+        vars[m[1]] = decodeURIComponent(m[2]).replaceAll('+', ' ');
     }
 
     return vars;

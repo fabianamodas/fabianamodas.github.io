@@ -26,7 +26,7 @@ var html = `
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <title>${data['name']}</title>
-    <link rel="stylesheet" href="/static/root.css" type="text/css" media="all">
+    <link rel="stylesheet" href="/css/root.css" type="text/css" media="all">
     <link rel="stylesheet" href="${styles}" type="text/css" media="all">
     <style type="text/css" media="screen">
 html, body {

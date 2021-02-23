@@ -52,6 +52,7 @@ footer {
     <section>
 
         <h1>${data['name']}</h1>
+        <img class="logo ${ ! data['logo'] ?'hidden': '' }" style="max-width: content-box;max-height: 200px" src="${data['logo']}"/>
         <h3 class="${!data['slogan']?'hidden':'' }">${data['slogan']}</h3>
 
         <div id='desc' class="${!data['description']?'hidden':''}">
@@ -59,9 +60,6 @@ footer {
         </div>
 
         <div>
-            <p class="${!data['logo']?'hidden':''}">
-                <img class="logo ${ ! data['logo'] ?'hidden': '' }" src="${data['logo']}"/>
-            </p>
             <p class="${!data['instagram']?'hidden':''}">
                 <a href="${data['instagram_link']}" target="_blank">
                 <img class="${ ! data['instagram'] ?'hidden': '' }" src="https://img.icons8.com/fluent/48/000000/instagram-new.png"/> <span>${data['instagram']}</span>

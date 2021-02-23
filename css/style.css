@@ -49,6 +49,26 @@ section p img {
     padding-left: 10px;
 }
 
+*::-webkit-scrollbar {
+    background: #5F461800;
+    width: 10px;
+    border-radius: 2px;
+}
+
+*::-webkit-scrollbar-track {
+    background: #5F461800;
+    border-radius: 2px;
+    margin: 3px;
+    width: 3px;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #aaaaaa99;
+    border-radius: 3px;
+    margin: 2px;
+    width: 3px;
+}
+
 .hidden {
     display: none !important;
 }
@@ -59,6 +79,18 @@ section a {
     color: #333333;
 }
 
+footer h3 {
+    background: none;
+}
+
 footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background: #eeeeee99;
+    border-radius: 10px;
+    padding: 10px;
     margin-top: 10%;
 }

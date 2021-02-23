@@ -2,6 +2,11 @@ function GetQueryVars() {
     var vars = {};
     j = 0;
     let q = decodeURIComponent(window.location.search);
+    if (q[0] == "?") {
+        q = q.slice(1)
+        q = "?j=&"+q
+    }
+
     const query = /\?|\&([^=]+)\=([^&]+)/;
 
     var m = q.match(query);
